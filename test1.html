@@ -9,7 +9,7 @@
   <script>
    document.getElementById("text").innerHTML = "Text added by JavaScript code";
    
-   fetch('/data.json', {cache: "no-store"})
+   fetch('/data.json?' + Date.now(), {cache: "no-store"})
     .then((response) => response.json())
     .then((json) => {
      console.log(json);
