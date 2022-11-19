@@ -11,7 +11,7 @@
    
    fetch('/data.json')
     .then((response) => response.json())
-    .then((json) => document.getElementById("json").innerHTML = json);
+    .then((json) => document.getElementById("json").innerHTML = JSON.stringify(json));
   </script>
  </body>
 </html>
