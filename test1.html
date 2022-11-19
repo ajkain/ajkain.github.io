@@ -4,9 +4,14 @@
  </head>
  <body>
   <div id="text"></div>
+  <div id="json"></div>
 
   <script>
    document.getElementById("text").innerHTML = "Text added by JavaScript code";
+   
+   fetch('./data.json')
+    .then((response) => response.json())
+    .then((json) => document.getElementById("json").innerHTML = json);
   </script>
  </body>
 </html>
